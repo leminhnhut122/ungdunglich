@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ungdunglich/static/css/main.d8172217.css",
+    "main.js": "/ungdunglich/static/js/main.959f8647.js",
+    "index.html": "/ungdunglich/index.html",
+    "main.d8172217.css.map": "/ungdunglich/static/css/main.d8172217.css.map",
+    "main.959f8647.js.map": "/ungdunglich/static/js/main.959f8647.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8172217.css",
+    "static/js/main.959f8647.js"
+  ]
+}
