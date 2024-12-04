@@ -1,0 +1,205 @@
+/* App.css */
+
+/* Reset một số kiểu mặc định của trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+
+    /* Thêm hình ảnh làm nền */
+    background-image: url();
+    background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ màn hình */
+    background-position: center; /* Căn giữa hình ảnh */
+    background-repeat: no-repeat; /* Ngừng việc lặp lại hình ảnh */
+  }
+  
+  #root {
+    width: 100%;
+    max-width: 900px; /* Giới hạn chiều rộng tối đa */
+    margin: 0 auto;
+    background-color: cadetblue;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng mờ */
+    padding: 30px;
+  }
+  
+  /* Tiêu đề ứng dụng */
+  h1 {
+    text-align: center;
+    color: #2a3d66;
+    font-size: 40px; /* Tăng kích thước chữ cho tiêu đề */
+    margin-bottom: 30px;
+    font-weight: 700; /* Đậm hơn cho tiêu đề */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ cho tiêu đề */
+  }
+  
+  /* Các nút bấm */
+  button {
+    background-color: #4caf50; /* Màu xanh lá */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Màu xanh đậm hơn khi hover */
+  }
+  
+  /* Kiểu cho các input */
+  input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #4caf50; /* Màu biên khi chọn input */
+    outline: none;
+  }
+  
+  /* Lịch */
+  .react-calendar {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.7);
+    margin-top: 20px;
+    width: 440px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng nhẹ */
+  }
+  
+  /* Các ngày trên lịch */
+  .react-calendar__month-view__weekdays {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    background-color: #f4f6f9; /* Nền màu sáng cho các ngày trong tuần */
+    padding: 10px 0;
+  }
+  
+  /* Các ô ngày */
+  .react-calendar__tile {
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Giảm kích thước chữ để các ngày có thể hiển thị rõ ràng */
+    text-align: center;
+    line-height: 40px; /* Điều chỉnh chiều cao cho phù hợp */
+    border-radius: 50%;
+    color: #333; /* Màu chữ của ngày */
+  }
+  
+  .react-calendar__tile:hover {
+    background-color: #f4f6f9; /* Hiệu ứng khi hover vào ngày */
+    cursor: pointer;
+  }
+  
+  .react-calendar__tile--now {
+    background-color: #4caf50; /* Màu cho ngày hiện tại */
+    color: white;
+  }
+  
+  .react-calendar__tile--active {
+    background-color: #2a3d66; /* Màu khi ngày được chọn */
+    color: white;
+  }
+  
+  /* Danh sách sự kiện */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  li button {
+    background-color: #ff5733; /* Màu đỏ để xóa sự kiện */
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  li button:hover {
+    background-color: #ff4d2d; 
+  }
+  
+  /* Thêm CSS vào phần nút điều hướng tháng */
+  .react-calendar__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 10px;
+  }
+  
+  /* Nút chuyển đổi tháng trái/phải */
+  .react-calendar__navigation__arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 24px; /* Kích thước lớn hơn cho các mũi tên */
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .react-calendar__navigation__arrow:hover {
+    color: #4caf50; /* Màu xanh lá khi hover vào mũi tên */
+  }
+  
+  /* Tiêu đề tháng và năm (ví dụ: "November 2024") */
+  .react-calendar__navigation__label {
+    font-size: 16px; 
+    font-weight: 600; 
+    color: #2a3d66; 
+    text-align: center; 
+    padding: 10px 0; /* Khoảng cách trên dưới */
+    text-transform: uppercase; /* Chuyển đổi tất cả thành chữ hoa */
+    letter-spacing: 2px; /* Khoảng cách giữa các chữ cái */
+    background-color: #f4f6f9; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .react-calendar__navigation__label:hover {
+    background-color: #0a4886; 
+  }
+  
+  /* Cải thiện độ tương phản và kích thước cho các nút chuyển tháng */
+  .react-calendar__navigation__prev2,
+  .react-calendar__navigation__next2 {
+    font-size: 18px;
+    color: #dd1c1c;
+  }
+  
+  .react-calendar__navigation__prev2:hover,
+  .react-calendar__navigation__next2:hover {
+    color: #4caf50;
+  }
+  
